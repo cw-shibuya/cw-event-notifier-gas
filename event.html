@@ -1,0 +1,25 @@
+<? 
+var time_info, guest_info;
+
+// イベントの時間
+if (all_day_event) {
+  time_info = '終日';
+} else { 
+  time_info = start_date + ' - ' + end_date;
+}å
+
+// 参加者情報
+var guest_num = guest_list.length;
+if (guest_num > 0) {
+  guest_info = guest_list.join('さん\n') + 'さん';
+} else {
+  guest_info = '設定されていません';
+}
+?>
+[info][title]<?= title ?>[/title]予定時間:
+<?= time_info ?>
+
+
+関係者:
+<?= guest_info ?>
+[/info]
