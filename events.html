@@ -1,0 +1,10 @@
+<?
+var top_message;
+if (message_list.length > 0) {
+  top_message = title || '(*)本日の予定一覧';
+} else {
+  top_message = title_no_event || '(*)本日の予定はありません';
+}
+?>
+<?= top_message ?> (<?= calendar_name ?>)
+<?= message_list.join('\n') ?>
