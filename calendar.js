@@ -78,7 +78,7 @@ function notify(calendar_id, room_id, option){};
         tpl.end_date = this.dateFormat(event_list[i].getEndTime());
 
         // 参加者情報
-        tpl.guest_list = getGuestList(event_list[i]);
+        tpl.guest_list = this.getGuestList(event_list[i]);
 
         // テンプレートからデータ生成
         message_list.push(tpl.evaluate().getContent());
@@ -141,3 +141,4 @@ function notify(calendar_id, room_id, option){};
   global.EventNotifier = EventNotifier;
 
 })(this);
+
